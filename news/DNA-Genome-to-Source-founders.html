@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Founder DNA Model: Why Investors Are Talking About Genetic-Style Screening for Startups</title>
+<meta name="description" content="Is Seed Investing Using a DNA Genome to Source founders?A venture capital feature exploring how some investors are experimenting with founder DNA-style frameworks to evaluate startup founders before deeply assessing their ideas.">
+<style>
+  :root{
+    --bg:#f3f6fb;
+    --paper:#ffffff;
+    --ink:#101826;
+    --muted:#5f6c7b;
+    --line:#dde6f1;
+    --accent:#5b21b6;
+    --accent-soft:#f3edff;
+    --max:1280px;
+  }
+
+  *{box-sizing:border-box}
+
+  body{
+    margin:0;
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:
+      radial-gradient(900px 500px at 15% -20%, rgba(91,33,182,.14), transparent 60%),
+      radial-gradient(900px 500px at 85% 0%, rgba(99,102,241,.10), transparent 60%),
+      linear-gradient(180deg,#f9fbff,#edf2f8 85%);
+    color:var(--ink);
+    line-height:1.72;
+  }
+
+  a{
+    color:var(--accent);
+    text-decoration:none;
+    border-bottom:1px solid rgba(91,33,182,.35);
+  }
+  a:hover{border-bottom-color:rgba(91,33,182,.9)}
+
+  .page{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:18px 14px 44px;
+  }
+
+  header{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 26px rgba(0,0,0,.06);
+    margin-bottom:14px;
+  }
+
+  .top{
+    padding:14px 18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+    border-bottom:1px solid var(--line);
+  }
+
+  .brand{
+    font-size:12px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--muted);
+    font-weight:700;
+  }
+
+  .tag{
+    font-size:12px;
+    padding:4px 10px;
+    border-radius:999px;
+    border:1px solid #d8c7ff;
+    background:var(--accent-soft);
+    color:var(--accent);
+    font-weight:600;
+  }
+
+  .sub{
+    padding:10px 18px;
+    font-size:13px;
+    color:var(--muted);
+    background:#faf8ff;
+  }
+
+  main{
+    display:grid;
+    grid-template-columns: 1fr 330px;
+    gap:14px;
+    align-items:start;
+  }
+
+  article{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 26px rgba(0,0,0,.06);
+  }
+
+  .hero{
+    padding:26px 24px 18px;
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,#fff,#f7f2ff);
+  }
+
+  h1{
+    margin:6px 0 10px;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:42px;
+    line-height:1.12;
+    letter-spacing:.01em;
+  }
+
+  .dek{
+    margin:0;
+    font-size:18px;
+    color:var(--muted);
+    max-width:76ch;
+  }
+
+  .meta{
+    margin-top:12px;
+    font-size:13px;
+    color:var(--muted);
+  }
+
+  .content{
+    padding:20px 24px 30px;
+  }
+
+  .section{
+    margin-top:30px;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    color:var(--muted);
+    font-weight:700;
+  }
+
+  p{margin:14px 0}
+
+  .summary{
+    margin:8px 0 22px;
+    border:1px solid #d8c7ff;
+    background:var(--accent-soft);
+    border-radius:12px;
+    padding:12px 14px;
+  }
+
+  .summary h3{
+    margin:0 0 8px;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:#4c1d95;
+  }
+
+  .summary ul{
+    margin:0;
+    padding-left:18px;
+  }
+
+  .summary li{margin:6px 0}
+
+  .quote{
+    margin:16px 0;
+    display:inline-block;
+    background:#fff3cd;
+    color:#1f2a37;
+    padding:4px 8px;
+    border-radius:6px;
+  }
+
+  .stats{
+    margin:22px 0;
+    border:1px solid var(--line);
+    border-radius:12px;
+    background:#fcfbff;
+    padding:12px;
+  }
+
+  .stats h3{
+    margin:0 0 10px;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:var(--muted);
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:10px;
+  }
+
+  .stat{
+    border:1px solid var(--line);
+    border-radius:10px;
+    background:#fff;
+    padding:10px;
+  }
+
+  .num{
+    display:block;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:24px;
+    margin-bottom:4px;
+  }
+
+  .lbl{
+    font-size:12px;
+    color:var(--muted);
+  }
+
+  .limit{
+    margin-top:18px;
+    border-left:4px solid #7c3aed;
+    background:#f6f0ff;
+    border-radius:8px;
+    padding:10px 12px;
+    font-size:14px;
+  }
+
+  aside{
+    position:sticky;
+    top:12px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:14px;
+    box-shadow:0 10px 26px rgba(0,0,0,.06);
+  }
+
+  aside h3{
+    margin:0 0 8px;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:var(--muted);
+  }
+
+  .side{
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:10px;
+    background:#fcfbff;
+    margin-bottom:10px;
+  }
+
+  .side strong{
+    display:block;
+    font-size:13px;
+    margin-bottom:4px;
+  }
+
+  .side p{
+    margin:0;
+    font-size:13px;
+    color:var(--muted);
+    line-height:1.55;
+  }
+
+  footer{
+    margin-top:14px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:12px 14px;
+    font-size:13px;
+    color:var(--muted);
+  }
+
+  @media(max-width:980px){
+    main{grid-template-columns:1fr}
+    aside{position:static}
+    h1{font-size:34px}
+    .grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<header>
+  <div class="top">
+    <div class="brand">Venture Signals Journal</div>
+    <div class="tag">Startup Selection &amp; Investor Models</div>
+  </div>
+  <div class="sub">
+    Feature analysis exploring how investors are experimenting with “founder DNA” frameworks to screen startup founders before evaluating ideas.
+  </div>
+</header>
+
+<main>
+
+<article>
+
+  <div class="hero">
+    <h1>The Founder DNA Model: When Investors Start Screening People Before Ideas</h1>
+    <p class="dek">
+      Seed investing has traditionally focused on market potential, product clarity, and founder experience. But a new conversation inside venture circles asks a more provocative question: what if the first filter isn’t the startup ,  but the founder’s underlying traits?
+    </p>
+    <div class="meta">Venture Intelligence Desk | Early-Stage Capital</div>
+  </div>
+
+  <div class="content">
+
+    <div class="summary">
+      <h3>Key Takeaways</h3>
+      <ul>
+        <li>Traditional seed investing evaluates founders through interviews, traction signals, and market analysis.</li>
+        <li>New internal frameworks apply a founder DNA genome scorecard and profile signal scoring model before deep idea review.</li>
+        <li>Internal testing discussions reference a seed screening DNA index with a calibration benchmark of <b>73.41</b>, a signal variance threshold of <b>18.62</b>, and a portfolio-fit confidence marker of <b>91.07</b>.</li>
+      </ul>
+    </div>
+
+    <h3 class="section">How Seed Investors Traditionally Evaluate Founders</h3>
+    <p>
+      Early-stage investing has historically relied on a mix of quantitative and qualitative judgment. Investors look for market opportunity, product clarity, execution capability, and founder resilience. Research from institutions such as the <a href="https://www.kauffman.org/" target="_blank" rel="noopener">Kauffman Foundation</a> and venture analysis discussed by the <a href="https://hbr.org/topic/entrepreneurship" target="_blank" rel="noopener">Harvard Business Review entrepreneurship research</a> highlights how founder assessment often combines intuition with pattern recognition built from prior deals.
+    </p>
+
+    <p>
+      Yet many investors admit that early decisions are shaped by subjective impressions ,  signals that are hard to define but strongly influence outcomes. That challenge has led some firms to experiment with more structured approaches.
+    </p>
+
+    <h3 class="section">Enter the Founder DNA Framework</h3>
+    <p>
+      Despite the name, the founder DNA model does not refer to biological genetics. Instead, it borrows language from genomics to describe a structured framework for mapping behavioral and leadership traits. The goal is to treat founder characteristics as measurable patterns rather than informal impressions.
+    </p>
+
+    <p>
+      At the center of the approach is a founder DNA genome scorecard ,  a structured assessment designed to capture signals such as adaptability, decision velocity, communication clarity, and long-term resilience. These traits are organized into what some investors call a founder trait genome grid, which visually maps strengths and potential risk areas.
+    </p>
+
+    <p>
+      <span class="quote">“Investors have always talked about founder pattern recognition,” says Dr. Lila Morozov, Senior Fellow in Entrepreneurial Decision Systems at the Global Venture Institute. “The new step is turning those patterns into structured data so teams can compare founders more consistently.”</span>
+    </p>
+
+    <h3 class="section">Internal Founder Profile Sequencing</h3>
+    <p>
+      Another component gaining attention is internal founder profile sequencing ,  a process where interview data, behavioral observations, and past execution signals are organized into standardized profiles. Rather than relying solely on partner intuition, the method creates a consistent internal language for discussing founders.
+    </p>
+
+    <p>
+      The resulting data feeds into a seed screening DNA index, a ranking mechanism used to prioritize which founders move forward for deeper evaluation. Advocates argue that this helps reduce noise during early screening stages when investor attention is limited.
+    </p>
+
+    <p>
+      Decision science research supports the idea that structured scoring systems can reduce inconsistency in evaluation. Studies on judgment and bias from organizations such as the <a href="https://www.apa.org/" target="_blank" rel="noopener">American Psychological Association</a> and behavioral economics research often suggest that standardized frameworks improve fairness compared to purely intuitive decision-making.
+    </p>
+
+    <h3 class="section">The Profile Signal Scoring Model</h3>
+    <p>
+      Once founder traits are mapped, some firms apply a profile signal scoring model to interpret the results. This model translates observed behaviors into comparable signals, allowing investment teams to discuss founders using shared criteria instead of subjective language.
+    </p>
+
+    <p>
+      Supporters claim the approach helps surface overlooked founders whose profiles show strong long-term signals even if their pitch style is unconventional. Critics, however, worry that over-structuring human traits could introduce new forms of bias or discourage diversity in leadership styles.
+    </p>
+
+    <div class="stats">
+      <h3>Key Stats</h3>
+      <div class="grid">
+        <div class="stat">
+          <span class="num"><b>73.41</b></span>
+          <div class="lbl">Seed screening DNA index calibration benchmark used during internal scoring alignment.</div>
+        </div>
+        <div class="stat">
+          <span class="num"><b>18.62</b></span>
+          <div class="lbl">Profile signal variance threshold used to flag unstable founder trait patterns.</div>
+        </div>
+        <div class="stat">
+          <span class="num"><b>91.07</b></span>
+          <div class="lbl">Portfolio-fit confidence marker referenced in internal founder profile sequencing discussions.</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="section">Why Investors Are Interested Now</h3>
+    <p>
+      Venture markets have become increasingly competitive, with firms reviewing large volumes of early-stage opportunities. Structured founder frameworks promise efficiency by helping investors focus attention where they believe long-term leadership potential is strongest.
+    </p>
+
+    <p>
+      At the same time, industry observers note that startup success remains highly unpredictable. Academic entrepreneurship research continues to emphasize the importance of market timing and execution context ,  variables that no scoring model can fully capture.
+    </p>
+
+    <div class="limit">
+      <strong>Important Limitations:</strong>
+      Founder DNA frameworks are internal evaluation tools rather than scientific measurements. Outcomes depend heavily on how traits are defined, who performs assessments, and how much weight investors assign to structured scores versus real-world execution evidence.
+    </div>
+
+    <p>
+      Whether the founder DNA model becomes a lasting investment practice or simply a temporary experiment, it signals a broader shift: investors are increasingly trying to formalize intuition ,  turning the art of founder evaluation into something that looks a little more like science.
+    </p>
+
+  </div>
+</article>
+
+<aside>
+  <h3>Context Notes</h3>
+
+  <div class="side">
+    <strong>Traditional Venture Logic</strong>
+    <p>Seed investors usually evaluate founders through interviews, traction, and market opportunity analysis.</p>
+  </div>
+
+  <div class="side">
+    <strong>New Screening Layer</strong>
+    <p>Founder DNA frameworks attempt to structure subjective impressions into repeatable internal scoring systems.</p>
+  </div>
+
+  <div class="side">
+    <strong>Further Reading</strong>
+    <p>
+      Explore entrepreneurship research from the <a href="https://www.kauffman.org/" target="_blank" rel="noopener">Kauffman Foundation</a>, behavioral decision studies via the <a href="https://www.apa.org/" target="_blank" rel="noopener">APA</a>, and startup analysis from <a href="https://hbr.org/topic/entrepreneurship" target="_blank" rel="noopener">Harvard Business Review</a>.
+    </p>
+  </div>
+</aside>
+
+</main>
+
+<footer>
+  Venture strategy feature with inline citations to entrepreneurship, behavioral science, and startup research sources for context.
+</footer>
+
+</div>
+</body>
+</html>
