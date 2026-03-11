@@ -31,7 +31,6 @@
 
     const meta = document.createElement('div');
     meta.className = 'meta';
-    meta.innerHTML = `<span>${story.author}</span><span>${story.date}</span>`;
 
     article.appendChild(label);
     article.appendChild(content);
@@ -63,11 +62,6 @@
         "@type": "NewsArticle",
         headline: story.title,
         url: new URL(story.url, location.href).href,
-        datePublished: story.date,
-        author: {
-          "@type": "Person",
-          name: story.author,
-        },
         description: story.summary,
       },
     })),
